@@ -85,6 +85,13 @@ public sealed class UserRepository(ApplicationDbContext dbContext) : IUserReposi
         return Task.CompletedTask;
     }
 
+    public Task UpdateAsync(User user, CancellationToken cancellationToken)
+    {
+        ArgumentNullException.ThrowIfNull(user);
+        dbContext.Users.Update(user);
+        return Task.CompletedTask;
+    }
+
     public Task DeleteAsync(User user, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(user);

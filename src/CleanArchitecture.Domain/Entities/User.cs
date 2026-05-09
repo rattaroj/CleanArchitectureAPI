@@ -33,6 +33,14 @@ public sealed class User : Entity<Guid>
         return user;
     }
 
+    public void ChangeName(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new DomainException("Name cannot be empty.");
+
+        Name = name.Trim();
+    }
+
     public void ChangeEmail(Email email)
     {
         Email = email ?? throw new DomainException("Email cannot be null.");
