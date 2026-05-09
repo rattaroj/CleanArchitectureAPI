@@ -5,4 +5,8 @@
     <Project Path="src/CleanArchitecture.Domain/CleanArchitecture.Domain.csproj" />
     <Project Path="src/CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CleanArchitecture.UnitTests/CleanArchitecture.UnitTests.csproj" />
+    <Project Path="tests/CleanArchitecture.IntegrationTests/CleanArchitecture.IntegrationTests.csproj" />
+  </Folder>
 </Solution>
